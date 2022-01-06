@@ -1,0 +1,12 @@
+{
+  "name": "@d1plo1d/slicer-render-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "D1plo1d",
+  "license": "AGPL-3.0",
+  "devDependencies": {
+    "@parcel/transformer-inline-string": "^2.0.1",
+    "parcel": "^2.0.1",
+    "@d1plo1d/nom-reprap-response-wasm": "link:../nom-reprap-response-wasm/pkg/"
+  }
+}
