@@ -1,6 +1,6 @@
 [package]
-name = "nom-reprap-response"
-version = "0.3.0"
+name = "nom-reprap-response-wasm"
+version = "0.1.0"
 edition = "2021"
 
 [lib]

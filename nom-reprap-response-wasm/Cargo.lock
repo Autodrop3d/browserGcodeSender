@@ -222,7 +222,7 @@ dependencies = [
 [[package]]
 name = "nom-reprap-response"
 version = "0.1.0"
-source = "git+https://github.com/D1plo1d/nom-reprap-response.git#101608619167695efc2106bbce1de0ce8f4c1899"
+source = "git+https://github.com/D1plo1d/nom-reprap-response.git#a60a5b3e01b208d67b8864db8268259cd25ad7b5"
 dependencies = [
  "eyre",
  "log",
@@ -231,15 +231,15 @@ dependencies = [
 ]
 
 [[package]]
-name = "nom-reprap-response"
-version = "0.3.0"
+name = "nom-reprap-response-wasm"
+version = "0.1.0"
 dependencies = [
  "console_error_panic_hook",
  "console_log",
  "env_logger",
  "log",
  "nom-gcode",
- "nom-reprap-response 0.1.0",
+ "nom-reprap-response",
  "serde",
  "wasm-bindgen",
  "web-sys",

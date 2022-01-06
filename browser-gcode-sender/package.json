@@ -1,0 +1,13 @@
+{
+  "name": "@d1plo1d/browser-gcode-sender",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "author": "D1plo1d",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel": "^2.0.1"
+  },
+  "dependencies": {
+    "@d1plo1d/nom-reprap-response-wasm": "link:../nom-reprap-response-wasm/pkg/"
+  }
+}

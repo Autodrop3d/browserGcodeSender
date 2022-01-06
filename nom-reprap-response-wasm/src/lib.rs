@@ -18,23 +18,33 @@ static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 #[derive(Serialize)]
 struct ParserOutput {
     remainder: String,
-    matched: String,
-    response: nom_reprap_response::Response,
+    matched: Option<String>,
+    response: Option<nom_reprap_response::Response>,
 }
 
 #[wasm_bindgen(js_name = "parseResponse")]
 pub fn parse_response(
-    response: String
+    input: String
 ) -> JsValue {
-    let (remainder, (matched, response)) = nom_reprap_response::parse_response(
-        &response[..],
-    ).unwrap();
+    console_error_panic_hook::set_once();
 
-    let output = ParserOutput {
-        remainder: remainder.to_string(),
-        matched,
-        response,
+    let res = nom_reprap_response::parse_response(
+        &input[..],
+    );
+
+    let output = if let Ok((remainder, (matched, response))) = res {
+        ParserOutput {
+            remainder: remainder.to_string(),
+            matched: Some(matched),
+            response: Some(response),
+        }
+    } else {
+        ParserOutput {
+            remainder: input,
+            matched: None,
+            response: None,
+        }
     };
 
-    JsValue::from_serde(&output).unwrap()
+    JsValue::from_serde(&output).expect("Creating JS value from parser output")
 }
