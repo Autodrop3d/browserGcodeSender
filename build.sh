@@ -11,10 +11,10 @@ popd
 pushd .
 cd ./browser-gcode-sender
 yarn
-rm -rf .parcel-cache/ && yarn parcel build index.js
+rm -rf ./.parcel-cache/ && yarn parcel build index.js
 popd
 
 cd ./example
 echo `pwd`
 yarn
-rm -rf .parcel-cache/ && yarn parcel build index.html
+rm -rf ./.parcel-cache/ && rm -rf ./build/ && yarn parcel build index.html
