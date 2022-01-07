@@ -1,15 +1,29 @@
 # Browser GCode Sender
 
-Gcode sender using web serial API (Work in progress)
+Run 3D prints directly from the Web Browser using the Web Serial API.
 
-## Running the Example
+## Dev Environment
+
+In order to set up a dev environment you'll need:
+
+1. NodeJS
+2. https://rustup.rs/
+3. `npm i -g yarn`
+
+## Builds
+
+Builds the HTML and JS for uploading to a http server.
+
+`./build.sh`
+
+The static files are outputted to: `./example/dist/`
+
+## Dev Server
 
 To watch both the Javascript and Rust and live reload on changes run:
 
 `cargo watch -C ./nom-reprap-response-wasm -s ../start.sh`
 
-## References
+## Related work: SerialTerminal.com
 
-See https://serialterminal.com for web serial reference implementation.
-
-Source: https://github.com/mmiscool/serialTerminal.com
+See also https://serialterminal.com for the web serial reference implementation this was based off.

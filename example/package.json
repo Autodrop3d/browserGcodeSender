@@ -1,11 +1,12 @@
 {
   "name": "@d1plo1d/browser-gcode-sender-example",
   "version": "1.0.0",
-  "main": "index.js",
   "author": "D1plo1d",
   "license": "MIT",
   "devDependencies": {
-    "parcel": "^2.0.1",
+    "parcel": "^2.0.1"
+  },
+  "dependencies": {
     "@d1plo1d/browser-gcode-sender": "link:../browser-gcode-sender/"
   }
 }

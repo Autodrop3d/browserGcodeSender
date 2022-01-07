@@ -1,11 +1,8 @@
-use nom_gcode::{GCode, GCodeLine, Mnemonic};
-use serde::{Deserialize, Serialize};
+use serde::Serialize;
 
-use wasm_bindgen::{prelude::*, JsCast};
+use wasm_bindgen::prelude::*;
 
 extern crate console_error_panic_hook;
-use std::{panic, io::Cursor};
-use log::{ info, warn };
 
 #[cfg(target_arch = "wasm32")]
 extern crate wee_alloc;
