@@ -17,4 +17,4 @@ popd
 cd ./example
 echo `pwd`
 yarn
-rm -rf ./.parcel-cache/ && rm -rf ./dist/ && yarn parcel build index.html
+rm -rf ./.parcel-cache/ && rm -rf ./dist/ && yarn parcel build --public-url "./" index.html
