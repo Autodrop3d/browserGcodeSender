@@ -2,6 +2,8 @@
 
 Run 3D prints directly from the Web Browser using the Web Serial API.
 
+Test Live https://GcodeSender.com/example/dist/index.html
+
 ## Dev Environment
 
 In order to set up a dev environment you'll need:
